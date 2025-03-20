@@ -13,6 +13,7 @@ def count_characters(text):
 def sort_dict(dict):
         return dict['count']
 
+
 def create_dictionaries(dictionary):
     # Create a list to append all the dictionaries
     dict_list = []
@@ -21,6 +22,20 @@ def create_dictionaries(dictionary):
         dict_list.append({'letter': letter, 'count': dictionary[letter]})
         dict_list.sort(reverse=True, key=sort_dict)
     return dict_list
+
+
+# Todo Recreate the above function using functional programming principles.
+def create_functional_dictionaries(dictionary):
+      dict_list = list(map(lambda letter: {'letter': letter, 'count': dictionary[letter]}, dictionary))
+      dict_list.sort(reverse=True, key=sort_dict)
+      return dict_list
+      
+
+
+
+
+
+
 
 def print_report(sorted_list, path, word_count):
       print('============ BOOKBOT ============')

@@ -20,10 +20,10 @@ try:
     def main():
         num_words = get_num_words(text)
         character_count = count_characters(text)
-        sorted_list_of_dicts = create_dictionaries(character_count)
+        sorted_list_of_dicts = create_functional_dictionaries(character_count)
         print_report(sorted_list_of_dicts, filepath, num_words)
     main()
-except FileNotFoundError:
+except Exception:
     print('No such file or directory, please verify the filepath')
 
 
